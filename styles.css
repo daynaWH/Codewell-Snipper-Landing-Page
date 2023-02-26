@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+}
+
+.hero {
+    background-image: url(Assets/Background.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 1.5rem 9rem 0;
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navicon {
+    display: none;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+nav li a {
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+}
+
+button {
+    padding: 1.2rem 1.5rem;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+span#free {
+    color: rgb(176, 176, 176);
+    font-weight: lighter;
+}
+
+.hero-content {
+    margin: 2rem auto 3.5rem;
+}
+
+.hero-content p {
+    width: 60%;
+    margin: 1rem auto;
+}
+
+h1, h2 {
+    font-weight: 700;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.1rem;
+}
+
+h2 {
+    font-size: 2.1rem;
+}
+
+.image-one {
+    max-width: 100%;
+    display: block;
+}
+
+.main-container {
+    padding: 4rem 9rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    width: 53%;
+}
+
+.image-two {
+    width: 40%;
+    min-width: 20rem;
+    margin: 2.5rem auto;
+}
+
+footer {
+    padding: 0 9rem 4rem;
+}
+
+@media (max-width: 768px) {
+    .hero, .main-container, footer {
+        padding: 0.5rem 3rem 2rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main, .hero-content p {
+        width: 100%;
+    }
+
+    .image-one {
+        position: relative;
+        top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navicon {
+        display: block;
+    }
+
+    .navicon:hover+ul, .header-nav:focus-within > ul, .header-nav ul:hover {
+        display: flex;
+        flex-direction: column;
+        background-color: #d45924ed;
+        width: 100vw;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 0;
+        opacity: 150%;
+    }
+
+    .header-nav ul {
+        display: none;
+        position: absolute;
+        right: 0;
+    }
+
+    .header-nav ul li {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: #000000 dashed;
+    }
+
+    .header-nav ul li:hover {
+        background-color: rgb(225, 132, 132);
+    }
+
+    .header-nav li button {
+        height: 30px;
+        padding: 0 10px;
+        background-color: #280f05ed;
+    }
+    
+    .hero-content button {
+        width: 100%;
+     }
+
+    .main-container {
+        margin-bottom: 60px;
+    }
+
+    footer {
+        display: inline;
+    }
+}
